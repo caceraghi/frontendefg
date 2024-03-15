@@ -7,8 +7,8 @@ body {
 
 header{
     background-color: darkcyan;
+    padding: 30px;
     text-align: center;
     font-size: 40px;
     color: white;
-    padding: 30px;
 }
