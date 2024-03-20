@@ -12,3 +12,12 @@ header{
     font-size: 40px;
     color: white;
 }
+
+nav {
+    float: left;
+    width: 30%;
+    height: 300px;
+    background-color: darkgray;
+    padding: 20px;
+}
+
