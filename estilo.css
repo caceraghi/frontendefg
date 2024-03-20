@@ -25,3 +25,35 @@ nav ul {
     list-style-type: none;
     padding: 0;
 }
+
+article{
+    float: left;
+    padding: 20px;
+    width: 70%;
+    background-color: dimgrey;
+    height: 300px;
+}
+
+/* after = depois */
+section::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+footer {
+    background-color:antiquewhite;
+    padding: 10px;
+    text-align: center;
+    color:black;
+}
+
+/* @media aplicar estilos especificos, para quando os 
+estilos serão aplicados quando a largura da tela for 
+no máximo 600px  */
+@media (max-width: 600px){
+    nav, article{
+        width: 100%;
+        height: auto;
+    }
+}
