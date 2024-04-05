@@ -47,26 +47,34 @@ body {
 }
 
 #rodape {
+    border: 1px solid #d4d4d4;
+    background-color: #f1f1f1;
     text-align: center;
     padding: 10px;
     font-size: 80%;
-    color: #ffffff;
+    line-height: 14px;
 }
 
-#menulista {
+#topo h1, #topo p, #menulista {
+    margin: 0;
     padding: 0;
-    font:  16px verdana;
 }
 
 .menuitem {
-    width: 175px;
-    background-color: #d14836;
-    border: 1px solid #d14836;
-    border-radius: 40px;
-    color: #ffffff;
+    background-color: #f1f1f1;
+    border: 1px solid #d4d4d4;
     list-style-type: none;
-    margin: 10px;
-    padding: 5px;
-    text-align: center;
+    padding: 2px;
     cursor: pointer;
 }
+
+.menuitem:hover {
+    background-color: #ffffff;
+}
+
+.menuitem:first-child {
+    background-color: #04AA6D;
+    color: white;
+    font-weight: bold;
+}
+
