@@ -13,9 +13,9 @@ body {
     overflow: auto;
 }
 
-#topo, #lateral, #rodape, #menuitem {
-    border-radius: 5px;
-    margin: 5px;
+#topo, #lateral, #rodape, .menuitem {
+    border-radius: 4px;
+    margin: 4px;
 }
 
 #topo {
@@ -26,7 +26,7 @@ body {
 
 #menu {
     width: 200px;
-    float: left;
+    float: left
 }
 
 #conteudo {
@@ -54,7 +54,7 @@ body {
     line-height: 14px;
 }
 
-#topo h1, #topo p, #menulista {
+#topo h1, #topo p, #menulist {
     margin: 0;
     padding: 0;
 }
@@ -72,9 +72,9 @@ body {
 }
 
 .menuitem:first-child {
-    background-color: #04AA6D;
-    color: white;
-    font-weight: bold;
+   background-color:#04AA6D;
+   color: white;
+   font-weight:bold;
 }
 
 a {
@@ -86,14 +86,16 @@ a:hover {
     text-decoration: none;
 }
 
+
 @media (max-width: 800px) {
     #lateral {
         width: auto;
         position: relative;
-    }
+    } 
     #conteudo {
         margin-right: 0;
-    }
+    }    
+       
 }
 
 @media (max-width: 600px) {
@@ -103,5 +105,5 @@ a:hover {
     }
     #conteudo {
         margin: 0;
-    }
+    }    
 }
