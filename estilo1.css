@@ -85,3 +85,23 @@ a {
 a:hover {
     text-decoration: none;
 }
+
+@media (max-width: 800px) {
+    #lateral {
+        width: auto;
+        position: relative;
+    }
+    #conteudo {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    #menu {
+        width: auto;
+        float: none;
+    }
+    #conteudo {
+        margin: 0;
+    }
+}
