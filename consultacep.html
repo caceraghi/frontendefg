@@ -4,10 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script>
+        function limpaformulario(){
+            document.getElementById('rua').value=("");
+            document.getElementById('bairro').value=("");
+            document.getElementById('cidade').value=("");
+            document.getElementById('estado').value=("");
+        }
+
+        function meu_callback(conteudo){
+            if (!("erro" in conteudo)){
+                document.getElementById('rua').value=(conteudo.logradouro);
+                document.getElementById('bairro').value=(conteudo.bairro);
+                document.getElementById('cidade').value=(conteudo.localidade);
+                document.getElementById('estado').value=(conteudo.estado);
+            }else{
+                limpaformulario();
+                alert("CEP não encontrado!!!");
+            }
+        }
+
+        function pesquisacep(valor){
+            var cep = valor.replace(/\D/g,'');
+            if (cep != ""){
+                var validacep = /^[0-9]{8}$/;
+                if (validacep.test(cep)){
+                    document.getElementById('rua').value="...";
+                    document.getElementById('bairro').value="...";
+                    document.getElementById('cidade').value="...";
+                    document.getElementById('estado').value="...";
+
+                    var script = document.createElement('script');
+
+                    script.src='https://viacep.com.br/ws/'+ cep +'/json/?callback=meu_callback';
+
+                    document.body.appendChild(script);
+                }else{
+                    limpaformulario();
+                    alert("Formato do CEP Inválido!!!");
+                }
+            }else{
+                limpaformulario();
+            }
+        }
+    </script>
 </head>
 <body>
     <form method="get">
-        <label>CEP:<input name="cep" type="text" id="cep" value=""></label><br>
+        <label>CEP:<input name="cep" type="text" id="cep" value="" onblur="pesquisacep(this.value);"></label><br>
         <label>Rua:<input name="rua" type="text" id="rua"></label><br>
         <label>Bairro:<input name="bairro" type="text" id="bairro"></label><br>
         <label>Cidade:<input name="cidade" type="text" id="cidade"></label><br>
