@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <script>
+        function multiplicar(){
+            var v1 = document.getElementById("valor1").value;
+            var v2 = document.getElementById("valor2").value;
+            var res = v1*v2;
+            alert(res);
+        }
+    </script>
+</head>
+<body>
+    <fieldset>
+        <legend>Calculadora</legend>
+        <label>Valor 1:<input type="text" id="valor1"></label>
+        <label>Valor 2:<input type="text" id="valor2"></label>
+        <button id="multiplicar" onclick="multiplicar()">*</button>
+    </fieldset>
+</body>
+</html>
