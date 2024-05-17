@@ -31,7 +31,6 @@ button {
     height: 150px;
     border-radius: 5px;
     margin-bottom: 10px;
-    display: flex;
     font-size: 30px;
     cursor: pointer;
     background-color: darkblue;
