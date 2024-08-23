@@ -17,7 +17,7 @@ function moverSlide(){
         cont = 0;
     }
 
-    setTimeout(moverSlide(), tempo);
+    setTimeout("moverSlide()", tempo);
 }
 
 window.onload = moverSlide;
