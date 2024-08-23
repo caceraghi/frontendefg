@@ -5,7 +5,7 @@ var imagens = [
     './imagem/03.jpg'
 ];
 
-var tempo = 1000;
+var tempo = 2500;
 var cont = 0;
 
 function moverSlide(){
